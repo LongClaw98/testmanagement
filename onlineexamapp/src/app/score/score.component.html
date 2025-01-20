@@ -1,0 +1,28 @@
+<p>score works!</p>
+
+<!DOCTYPE html>
+<html>
+
+<body>
+       <span style="color: rgb(180, 6, 196); font-size: large;" >Score is {{score}} </span>   
+       
+       <table>
+         <tr>
+            <th>Qno</th>
+            <th>Question</th>
+            <th>SubmittedAnswer</th>
+            <th>CorrectAnswer</th>
+         </tr>
+
+         <tr *ngFor= "let answer of allanswers" [style.background] ="compare(answer.submittedAnswer,answer.correctAnswer)">
+
+                <td>{{answer.qno}}</td>
+                <td>{{answer.qtext}}</td>
+                <td>{{answer.submittedAnswer}}</td>
+                <td>{{answer.correctAnswer}}</td>
+    
+        </tr>
+       </table>
+    
+</body>
+</html>

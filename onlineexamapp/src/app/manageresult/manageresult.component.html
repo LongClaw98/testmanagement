@@ -1,0 +1,57 @@
+<p>manageresult !</p>
+
+
+subject
+<input type="text" name="subject" [(ngModel)]="subject"> <br> <br> 
+
+<button (click)="showResult(pageno)"> show result</button> <br>
+
+<table style="align-items: center;">
+    <tr>
+        <th>username</th>
+        <th>subject</th>
+        <th>score</th>
+    </tr>
+    <tr *ngFor="let result of slicedResult">
+        <td>{{result.username}}</td>
+        <td>{{result.subject}}</td>
+        <td>{{result.score}}</td>
+    </tr>
+</table>
+
+<div>
+<input type="button" *ngFor="let pageno of pages" [value]="pageno" (click)="showResult(pageno)" style="color: black;" > 
+</div>
+
+<!-- <p>Manager Result!</p> -->
+
+<!-- Subject input field -->
+<!-- <label for="subject">Subject</label>
+<input type="text" name="subject" [(ngModel)]="subject"> <br> <br>
+
+Button to show results for the current page
+<button (click)="showResult(pageno)">Show Result</button> <br>  -->
+<!-- Table to display results -->
+<!-- <table style="align-items: center;">
+    <thead>
+        <tr>
+            <th>Username</th>
+            <th>Subject</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of slicedResult">
+            <td>{{ result.username }}</td>
+            <td>{{ result.subject }}</td>
+            <td>{{ result.score }}</td>
+        </tr>
+    </tbody>
+</table> -->
+
+<!-- Pagination buttons to navigate through pages -->
+<!-- <div>
+    <button *ngFor="let page of pages" [value]="page" (click)="onPageChange(page)" style="color: black;">
+        {{ page }}
+    </button>
+</div> --> 

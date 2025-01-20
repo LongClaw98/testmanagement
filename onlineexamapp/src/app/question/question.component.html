@@ -1,0 +1,32 @@
+<html>
+    <body>
+        
+  
+<p>question works!</p>
+  <div >{{durationmessage}}</div>
+<form >
+
+    <input type="text" name="qno" [(ngModel)]="question.qno"> <br> <br>
+    <input type="text" name="qtext" [(ngModel)]="question.qtext" style="padding: 10px ;"> <br>
+
+    <br><br>
+
+  
+
+    <input class="css-checkbox" name="radioModel" [(ngModel)]="select" [checked]="opColor(question.op1)[1]" name="options" type="radio" (change)="saveAnswer()" value="{{question.op1}}" [(ngModel)]="submittedAnswer">  <span [style.color]="opColor(question.op1)[0]" > {{question.op1}} </span> <br>
+    <input class="css-checkbox" name="radioModel" [(ngModel)]="select" [checked]="opColor(question.op2)[1]" name="options" type="radio" (change)="saveAnswer()" value="{{question.op2}}" [(ngModel)]="submittedAnswer">  <span [style.color]="opColor(question.op2)[0]"> {{question.op2}} </span> <br>
+    <input class="css-checkbox" name="radioModel" [(ngModel)]="select" [checked]="opColor(question.op3)[1]" name="options" type="radio" (change)="saveAnswer()" value="{{question.op3}}" [(ngModel)]="submittedAnswer">  <span [style.color]="opColor(question.op3)[0]" > {{question.op3}} </span> <br>
+    <input class="css-checkbox" name="radioModel" [(ngModel)]="select" [checked]="opColor(question.op4)[1]" name="options" type="radio" (change)="saveAnswer()" value="{{question.op4}}" [(ngModel)]="submittedAnswer">  <span [style.color]="opColor(question.op4)[0]" > {{question.op4}} </span><br>
+    
+    <input type="hidden" name="answer" [(ngModel)]="question.answer">  <br> <br>
+
+    <input type="button" value="previous" (click)="previousQuestion()">
+    <input type="button" value="next" (click)="nextQuestion()"> <br> <br>
+
+    <input type="button" value="endexam" (click)="endexam()">
+
+</form>
+
+
+</body>
+</html>

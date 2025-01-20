@@ -1,0 +1,43 @@
+<h2>Question Management </h2>
+
+<html>
+    <body>
+        
+        <form >
+            question
+            <input type="text" name="qno" [(ngModel)]="question.qno"> <br> <br>
+            subject
+            <input name="subject" type="text" [(ngModel)]="question.subject" size= "40">  <br> <br>   
+            Question
+            <input type="text" name="qtext" [(ngModel)]="question.qtext" size= "50" style="padding: align-self;"> <br>
+            
+            <br><br>
+            
+            
+            
+            op1
+            <input name="op1" type="text"  [(ngModel)]="question.op1" size= "40"  > <br><br>
+            op2
+            <input name="op2" type="text"  [(ngModel)]="question.op2" size= "40"> <br><br>
+            op3
+            <input name="op3" type="text"  [(ngModel)]="question.op3" size= "40"> <br><br>
+            op4    
+            <input name="op4" type="text"  [(ngModel)]="question.op4" size= "40">  <br><br>
+            
+            answer 
+            <input type="text" name="answer" [(ngModel)]="question.answer" size= "40">  <br> <br>
+            
+            <input type="button" value="viewQuestion" (click)="viewQuestion()">  &nbsp;
+            <input type="button" value="updateQuestion" (click)="updateQuestion()"> &nbsp;
+            <input type="button" value="deleteQuestion" (click)="deleteQuestion()"> &nbsp;
+            <input type="button" value="deleteQuestion" (click)="deleteQuestion()"> &nbsp;
+            <input type="button" value="addQuestion" (click)="addQuestion()"> &nbsp;
+
+            
+
+</form>
+
+<span style="color: teal; font-size: larger;">{{message}}</span>
+
+</body>
+</html>
