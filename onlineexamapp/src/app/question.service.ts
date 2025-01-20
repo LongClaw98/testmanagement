@@ -40,6 +40,10 @@ export class QuestionService {
     return this.httpclient.post<Result>("http://127.0.0.1:8000/examapi/saveResult/",result)
   }
 
+  GetAllQuestions(subject:string)
+  {
+    return this.httpclient.get<Question>('http://127.0.0.1:8000/examapi/showAllquestions/'+subject)
+  }
 }
 
 export class Question

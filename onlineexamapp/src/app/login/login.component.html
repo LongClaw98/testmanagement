@@ -1,17 +1,23 @@
 <p>Login </p>
 
-<html>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+    </style>    
+<html >
 <body>
-    <form>
+    <form >
         <div>Usernme </div>
-        <input type="text" name="username" [(ngModel)]="user.username"> <br>
+        <input type="text" name="username" [(ngModel)]="user.username"><a style="color: silver" > for testing x </a> <br>
         <div>Password</div>
-        <input type="password" name="password" [(ngModel)]="user.password"><br>
-        <div>Subject</div> <br>
-        <select name="subject" [(ngModel)]="subject"> 
-            
-            <option *ngFor="let subject of  subjects"  [value]="subject">{{subject}}</option>
+        <input type="password" name="password" [(ngModel)]="user.password"><a style="color: silver"> for testing y</a> <br> <br>
+        <div>Subject</div> 
         
+        <select name="subject" [(ngModel)]="subject"> 
+                <option *ngFor="let subject of  subjects"  [value]="subject">{{subject}}</option>
         </select> <br> <br>
         
         <input type="button" value="login" (click)="validate()" > &nbsp;
@@ -20,6 +26,9 @@
     </form>
     
 <h3>{{message}}</h3>
+
+
+
 
 
 </body>

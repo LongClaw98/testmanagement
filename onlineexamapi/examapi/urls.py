@@ -12,6 +12,8 @@ urlpatterns = [
     path("validateAdmin/",views.validateAdmin),
     path("getResults/<subject>",views.getResults),
     path("saveResult/",views.saveResult),
+    
+
 
 
     

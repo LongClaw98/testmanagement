@@ -13,6 +13,11 @@ export class QuestionmanagementComponent {
 
   question:Question= new Question(0,'','','','','','','');
   message : string ='';
+  subject:string='';
+
+  data:any='';
+  questionarray:Question[]=[]
+  
   constructor(private questionService:QuestionService)
   {
     
@@ -38,4 +43,12 @@ export class QuestionmanagementComponent {
   {
     this.questionService.addQuestion(this.question).subscribe(response => this.message ="record Added")
   }
+  GetAllQuestions()
+  {
+    this.questionService.GetAllQuestions(this.subject).subscribe(questionobj => {
+    this.data= questionobj ; 
+    this.questionarray=this.data;
+    })
+  }
+
 }

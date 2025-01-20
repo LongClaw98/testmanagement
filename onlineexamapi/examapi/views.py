@@ -26,9 +26,11 @@ def validate(request):
 
 @api_view(['GET'])
 def GetAllQuestions(request,subject):
-    print('hello')
+    print()
     allquestions=Question.objects.filter(subject=subject)
+    print()
     return Response(QuestionSerilizer(allquestions,many=True).data)
+
 
 @api_view(['GET'])
 def getAllSubjects(request):
@@ -98,3 +100,4 @@ def saveResult(request):
     Result.objects.create(username=result["username"],subject=result["subject"],score=result["score"])
     print("saved")
     return Response(True)
+
